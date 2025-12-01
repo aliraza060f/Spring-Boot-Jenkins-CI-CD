@@ -16,11 +16,18 @@ public class ProfesseurService implements IDao<Professeur> {
     @Autowired
     private ProfesseurRepository professeurRepository;
 
+    /*@
+      @ requires o != null;
+      @ ensures \result != null;
+      @*/
     @Override
     public Professeur create(Professeur o) {
         return professeurRepository.save(o);
     }
 
+    /*@
+      @ requires o != null;
+      @*/
     @Override
     public boolean delete(Professeur o) {
         try {
@@ -32,6 +39,10 @@ public class ProfesseurService implements IDao<Professeur> {
         }
     }
 
+    /*@
+      @ requires o != null;
+      @ ensures \result != null;
+      @*/
     @Override
     public Professeur update(Professeur o) {
         return professeurRepository.save(o);
@@ -42,15 +53,28 @@ public class ProfesseurService implements IDao<Professeur> {
         return professeurRepository.findAll();
     }
 
+    /*@
+      @ requires id > 0;
+      @*/
     @Override
     public Professeur findById(int id) {
         return professeurRepository.findById(id).orElse(null);
     }
 
+    /*@
+      @ requires specialite != null;
+      @ ensures \result != null;
+      @*/
     public List<Professeur> findBySpecialite(Specialite specialite) {
         return professeurRepository.findBySpecialite(specialite);
     }
 
+    /*@
+      @ requires dateDebut != null;
+      @ requires dateFin != null;
+      @ requires dateDebut.before(dateFin);
+      @ ensures \result != null;
+      @*/
     public List<Professeur> findByDateEmbaucheBetween(Date dateDebut, Date dateFin) {
         return professeurRepository.findByDateEmbaucheBetween(dateDebut, dateFin);
     }
