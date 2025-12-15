@@ -8,7 +8,7 @@ public class SpecialiteEntityTest {
     @Test
     void testSpecialiteSettersAndGetters() {
         Specialite s = new Specialite();
-        s.setNom("Informatique");
-        assertEquals("Informatique", s.getNom());
+        s.setLibelle("Informatique");
+        assertEquals("Informatique", s.getLibelle());
     }
 }
