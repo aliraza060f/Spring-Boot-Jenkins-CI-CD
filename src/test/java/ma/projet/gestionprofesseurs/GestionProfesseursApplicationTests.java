@@ -1,8 +1,11 @@
 package ma.projet.gestionprofesseurs;
 
-// Test disabled because it requires a database configuration
-// which is not needed for unit-level dependability analysis.
+import org.junit.jupiter.api.Test;
 
 class GestionProfesseursApplicationTests {
-    // intentionally empty
+
+    @Test
+    void contextLoads() {
+        // no Spring Boot context (no DB needed)
+    }
 }
