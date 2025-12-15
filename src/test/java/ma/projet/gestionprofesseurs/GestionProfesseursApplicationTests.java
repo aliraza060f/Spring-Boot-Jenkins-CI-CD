@@ -1,9 +1,13 @@
+package ma.projet.gestionprofesseurs;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
 @SpringBootTest
 class GestionProfesseursApplicationTests {
 
-    @org.junit.jupiter.api.Disabled
     @Test
     void contextLoads() {
+        // keep empty
     }
-
 }
